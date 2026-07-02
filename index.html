@@ -11,12 +11,12 @@
         var p = window.location.search.match(/[?&]p=([^&]*)/);
         if (p) {
           window.history.replaceState(null, null,
-            window.location.pathname + decodeURIComponent(p[1]).replace(/~and~/g, '&')
+            window.location.pathname.replace(/\/$/, '') + decodeURIComponent(p[1]).replace(/~and~/g, '&')
           );
         }
       })();
     </script>
-    <script type="module" crossorigin src="/prompt-engineering-academy/assets/index-CXH2sk3v.js"></script>
+    <script type="module" crossorigin src="/prompt-engineering-academy/assets/index-DnycAhUy.js"></script>
     <link rel="stylesheet" crossorigin href="/prompt-engineering-academy/assets/index-BNlzsSXc.css">
   </head>
   <body>
