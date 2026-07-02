@@ -1,0 +1,112 @@
+@use './variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $color-text;
+  background-color: $color-bg;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $color-primary-hover;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  color: $color-text;
+}
+
+p {
+  margin-bottom: $space-4;
+  color: $color-text;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+code {
+  font-family: $font-family-mono;
+  font-size: 0.9em;
+  background: $color-bg-elevated;
+  padding: 2px 6px;
+  border-radius: $radius-sm;
+  color: $color-primary-hover;
+}
+
+pre {
+  font-family: $font-family-mono;
+  background: $color-bg-elevated;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  padding: $space-4;
+  overflow-x: auto;
+  font-size: $font-size-sm;
+  color: $color-text;
+  margin-bottom: $space-4;
+}
+
+ul, ol {
+  padding-left: $space-6;
+  margin-bottom: $space-4;
+
+  li {
+    margin-bottom: $space-2;
+  }
+}
+
+button {
+  cursor: pointer;
+  font-family: $font-family-base;
+  border: none;
+  outline: none;
+}
+
+input, textarea {
+  font-family: $font-family-base;
+  outline: none;
+}
+
+.container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $space-6;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
